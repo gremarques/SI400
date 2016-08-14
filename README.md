@@ -20,7 +20,7 @@ Leonardo Takeshi Muniz| 172095 |    leomunniz@gmail.com     | leomunniz  |
 ###_http://data.worldbank.org/indicator/AG.CON.FERT.ZS?view=chart_ *(Consumo de Fertilizantes)*
 *____________________________________________________________________________________________________________________________________*
 ###- Descrição dos dados (atributos ou campos presentes e o significado de cada um deles):
-*Dados referentes ao consumo de fertilizantes, estes foram discriminados pela quantidade consumida por cada país dentro de um* *determinado período de tempo. No caso em questão, o período está associado aos anos de 2002 a 2013 e em relação aos países há uma* *estupenda diversificação.*
+**Dados referentes ao consumo de fertilizantes, estes foram discriminados pela quantidade consumida por cada país dentro de um** *determinado período de tempo. No caso em questão, o período está associado aos anos de 2002 a 2013 e em relação aos países há uma* *estupenda diversificação.*
 
 *____________________________________________________________________________________________________________________________________*
 ###- Volume de dados (quantos valores existem ou dimensão do conjunto de dados em bytes):
