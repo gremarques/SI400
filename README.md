@@ -17,7 +17,7 @@ Leonardo Takeshi Muniz|    leomunniz@gmail.com     | leomunniz  |
 *____________________________________________________________________________________________________________________________________*
 ###- Fonte(s) de dados (identificação da fonte e URL para os dados): 
   
-###_http://data.worldbank.org/indicator/AG.CON.FERT.ZS?view=chart_ (Consumo de Fertilizantes)
+###_http://data.worldbank.org/indicator/AG.CON.FERT.ZS?view=chart_ *(Consumo de Fertilizantes)*
 *____________________________________________________________________________________________________________________________________*
 ###- Descrição dos dados (atributos ou campos presentes e o significado de cada um deles)
 
@@ -28,6 +28,7 @@ Leonardo Takeshi Muniz|    leomunniz@gmail.com     | leomunniz  |
 ###- Formato de disponibilização dos dados (CSV, JSON, XML...)
 
 *____________________________________________________________________________________________________________________________________*
-###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado.
+###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
 
+####               *Usuário consulta os dados filtrando por país e intervalo de tempo*
 *____________________________________________________________________________________________________________________________________*
