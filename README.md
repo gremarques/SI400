@@ -7,7 +7,7 @@ ________________________________________________________________________
 
 _Nome do membro_      |           _Email_          |  _Github_  | 
 ----------------------|----------------------------|------------|
-Brandon Nelsen        |                            |            |
+Brandon C. Nelsen     |    brandoncnelsen@gmail.com| b154810    |
 Bruno A. C. da Silva  |    bacs30@gmail.com        | b165135    |
 Gregory Dias Marques  |    gremarques14@gmail.com  | gremarques |
 Leonardo Takeshi Muniz|    leomunniz@gmail.com     | leomunniz  |
