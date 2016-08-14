@@ -1,6 +1,6 @@
 #_Estatística sobre a variação do consumo de_
 #_**fertilizantes** em diversos países (2002-2013)_
-_____________________________________________________________________________________________________
+________________________________________________________________________
 ###-URL para página no GitHub: _https://github.com/gremarques/SI400_
 *_____________________________________________________________________________________________________*
 ###-Identificação dos membros da equipe de desenvolvimento do projeto:
