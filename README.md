@@ -21,6 +21,20 @@ Consumo de Fertilizantes e _http://data.worldbank.org/indicator/AG.CON.FERT.ZS?v
 *____________________________________________________________________________________________________________________________________*
 ###- Descrição dos dados (atributos ou campos presentes e o significado de cada um deles):
 
+Country Name - Nome do país
+
+Country Code - Código do país
+
+Indicator Name - Nome do Indicador
+
+Indicator Code - Código do Indicador
+
+2002 ~ 2013 - Quantidade de fertilizante usado
+
+Region - Região do país
+
+IncomeGroup - Grupo de renda do país
+
 *____________________________________________________________________________________________________________________________________*
 ###- Volume de dados (quantos valores existem ou dimensão do conjunto de dados em bytes):
 
