@@ -4,6 +4,7 @@
 ###-URL para página no GitHub: _https://github.com/gremarques/SI400_
 
 ###-Identificação dos membros da equipe de desenvolvimento do projeto:
+
 _Nome do membro_      |           _Email_          |  _Github_  | 
 ----------------------|----------------------------|------------|
 Brandon Nelsen        |                            |            |
