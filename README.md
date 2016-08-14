@@ -4,12 +4,12 @@
 ###-URL para página no GitHub: _https://github.com/gremarques/SI400_
 
 ###-Identificação dos membros da equipe de desenvolvimento do projeto:
-_Nome do membro_      |           _Email_          |_Github_ | 
-----------------------|----------------------------|---------|
-Brandon Nelsen        |                            |         |
-Bruno A. C. da Silva  |    bacs30@gmail.com        |         |
-Gregory Dias Marques  |    gremarques14@gmail.com  |         |
-Leonardo Takeshi Muniz|    leomunniz@gmail.com     |         |
+_Nome do membro_      |           _Email_          |  _Github_  | 
+----------------------|----------------------------|------------|
+Brandon Nelsen        |                            |            |
+Bruno A. C. da Silva  |    bacs30@gmail.com        | b165135    |
+Gregory Dias Marques  |    gremarques14@gmail.com  | gremarques |
+Leonardo Takeshi Muniz|    leomunniz@gmail.com     | leomunniz  |
 
 ###- Motivação (por que o projeto é relevante?)
 
