@@ -6,11 +6,11 @@
 ###-Identificação dos membros da equipe de desenvolvimento do projeto:
 _Nome do membro_ | _Github_ 
 -----------------|-------------
-Brandon          |
-Bruno            |
-Gregory          |
-Leonardo         |
------------------|-------------
+Brandon Nelsen        |
+Bruno A. C. da Silva  |
+Gregory Dias Marques  |
+Leonardo Takeshi Muniz|
+
 ###- Motivação (por que o projeto é relevante?)
 
 ###- Fonte(s) de dados (identificação da fonte e URL para os dados)
