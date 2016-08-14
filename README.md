@@ -1,5 +1,5 @@
-#      __Estatística sobre a variação do consumo de__
-#     __fertilizantes em diversos países (2002-2013)__
+#              __Estatística sobre a variação do consumo de__
+#              __fertilizantes em diversos países (2002-2013)__
 
 ###-URL para página no GitHub:
 
