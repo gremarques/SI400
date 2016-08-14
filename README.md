@@ -31,5 +31,5 @@ Dados referentes ao consumo de fertilizantes, estes foram discriminados pela qua
 *____________________________________________________________________________________________________________________________________*
 ###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
 
-####               *Usuário consulta os dados filtrando por país e intervalo de tempo*
+Usuário consulta os dados filtrando por país e intervalo de tempo
 *____________________________________________________________________________________________________________________________________*
