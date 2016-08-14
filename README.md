@@ -5,12 +5,12 @@ ________________________________________________________________________
 *____________________________________________________________________________________________________________________________________*
 ###-Identificação dos membros da equipe de desenvolvimento do projeto:
 
-_Nome do membro_      |           _Email_          |  _Github_  | 
-----------------------|----------------------------|------------|
-Brandon C. Nelsen     |    brandoncnelsen@gmail.com| b154810    |
-Bruno A. C. da Silva  |    bacs30@gmail.com        | b165135    |
-Gregory Dias Marques  |    gremarques14@gmail.com  | gremarques |
-Leonardo Takeshi Muniz|    leomunniz@gmail.com     | leomunniz  |
+_Nome do membro_      | _RA_   |           _Email_          |  _Github_  | 
+----------------------|--------|----------------------------|------------|
+Brandon C. Nelsen     | 154810 |    brandoncnelsen@gmail.com| b154810    |
+Bruno A. C. da Silva  | 165135 |    bacs30@gmail.com        | b165135    |
+Gregory Dias Marques  | 168878 |    gremarques14@gmail.com  | gremarques |
+Leonardo Takeshi Muniz| 172095 |    leomunniz@gmail.com     | leomunniz  |
 *____________________________________________________________________________________________________________________________________*
 ###- Motivação (por que o projeto é relevante?)
 
