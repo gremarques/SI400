@@ -1,5 +1,3 @@
-
-###-Título: do projeto:
 #Estatística sobre a variação do consumo de fertilizantes em diversos países (2002-2013)
 
 ###-URL para página no GitHub:
