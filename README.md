@@ -14,6 +14,7 @@ Leonardo Takeshi Muniz| 172095 |    leomunniz@gmail.com     | leomunniz  |
 *____________________________________________________________________________________________________________________________________*
 ###- Motivação (por que o projeto é relevante?):
 
+Apresentar, de modo interativo, dados a respeito da variação do consumo de fertilizantes, kilograma por hectare arável de terra, ao redor do mundo, entre 2002 e 2013.
 *____________________________________________________________________________________________________________________________________*
 ###- Fonte(s) de dados (identificação da fonte e URL para os dados): 
   
@@ -38,8 +39,12 @@ IncomeGroup - Grupo de renda do país
 *____________________________________________________________________________________________________________________________________*
 ###- Volume de dados (quantos valores existem ou dimensão do conjunto de dados em bytes):
 
+Há uma variação entre 35 KB e 135 KB dependendo do formato escolhido.
+
 *____________________________________________________________________________________________________________________________________*
 ###- Formato de disponibilização dos dados (CSV, JSON, XML...):
+
+Temos três opções de formato disponibilizados dos dados, sendo o formato CSV, XML e EXCEL.
 
 *____________________________________________________________________________________________________________________________________*
 ###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
