@@ -45,6 +45,6 @@ IncomeGroup - Grupo de renda do país
 ###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
 
 
-![Usuário consulta os dados filtrando por país e intervalo de tempo](http://pt.actualitix.com/grafico/guy/guiana-consumo-de-fertilizantes.png)
+![Usuário consulta os dados filtrando por país e intervalo de tempo](https://github.com/leomunniz/leomunniz.github.io/blob/master/images/graph%20(2).jpg)
 **Usuário consulta os dados filtrando por país e intervalo de tempo
 ____________________________________________________________________________________________________________________________________*
