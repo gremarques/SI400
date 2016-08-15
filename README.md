@@ -47,5 +47,5 @@ IncomeGroup - Grupo de renda do país
 
 ![Usuário consulta os dados filtrando por país e intervalo de tempo](http://pt.actualitix.com/grafico/guy/guiana-consumo-de-fertilizantes.png)
 
-_Usuário consulta os dados filtrando por país e intervalo de tempo_
+__Usuário consulta os dados filtrando por país e intervalo de tempo__
 *____________________________________________________________________________________________________________________________________*
