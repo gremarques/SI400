@@ -45,5 +45,5 @@ IncomeGroup - Grupo de renda do país
 ###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
 
 
-![Usuário consulta os dados filtrando por país e intervalo de tempo](https://www.google.com.br/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjhnfP0rsLOAhVJQpAKHT2aCRkQjRwIBw&url=http%3A%2F%2Fwww.fundosanimais.com%2Fimagens-imagens-lobos-jpg&psig=AFQjCNGpIr3Z52sfcLgN4y1EHslC5Calzw&ust=1471314269725266)
+![Usuário consulta os dados filtrando por país e intervalo de tempo](http://www.fundosanimais.com/Imagens/imagens-lobos.jpg)
 *____________________________________________________________________________________________________________________________________*
