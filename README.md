@@ -46,5 +46,7 @@ IncomeGroup - Grupo de renda do país
 
 
 ![Usuário consulta os dados filtrando por país e intervalo de tempo](https://github.com/leomunniz/leomunniz.github.io/blob/master/images/graph%20(2).jpg)
+
+
 **Usuário consulta os dados filtrando por país e intervalo de tempo
 ____________________________________________________________________________________________________________________________________*
