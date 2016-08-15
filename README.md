@@ -44,5 +44,6 @@ IncomeGroup - Grupo de renda do país
 *____________________________________________________________________________________________________________________________________*
 ###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
 
-Usuário consulta os dados filtrando por país e intervalo de tempo
+
+![Usuário consulta os dados filtrando por país e intervalo de tempo](https://mail.google.com/mail/u/0/?ui=2&ik=8a5c53f46c&view=att&th=1568aa790c1e2ef9&attid=0.1&disp=safe&realattid=f_irv1hm4d0&zw)
 *____________________________________________________________________________________________________________________________________*
