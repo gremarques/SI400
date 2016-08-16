@@ -11,15 +11,15 @@ Brandon C. Nelsen     | 154810 |    brandoncnelsen@gmail.com| b154810    |
 Bruno A. C. da Silva  | 165135 |    bacs30@gmail.com        | b165135    |
 Gregory Dias Marques  | 168878 |    gremarques14@gmail.com  | gremarques |
 Leonardo Takeshi Muniz| 172095 |    leomunniz@gmail.com     | leomunniz  |
-*_____________________________________________________________________________________________________________________________*
+*_______________________________________________________________________________________________*
 ###- Motivação (por que o projeto é relevante?):
 
 Apresentar, de modo interativo, dados a respeito da variação do consumo de fertilizantes, kilograma por hectare arável de terra, ao redor do mundo, entre 2002 e 2013.
-*_____________________________________________________________________________________________________________________________*
+*_______________________________________________________________________________________________*
 ###- Fonte(s) de dados (identificação da fonte e URL para os dados): 
   
 Consumo de Fertilizantes e _http://data.worldbank.org/indicator/AG.CON.FERT.ZS?view=chart_, respectivamente.
-*_____________________________________________________________________________________________________________________________*
+*_______________________________________________________________________________________________*
 ###- Descrição dos dados (atributos ou campos presentes e o significado de cada um deles):
 
 Country Name - Nome do país
@@ -36,17 +36,17 @@ Region - Região do país
 
 IncomeGroup - Grupo de renda do país
 
-*_____________________________________________________________________________________________________________________________*
+*_______________________________________________________________________________________________*
 ###- Volume de dados (quantos valores existem ou dimensão do conjunto de dados em bytes):
 
 Há uma variação entre 35 KB e 135 KB dependendo do formato escolhido.
 
-*_____________________________________________________________________________________________________________________________*
+*_______________________________________________________________________________________________*
 ###- Formato de disponibilização dos dados (CSV, JSON, XML...):
 
 Temos três opções de formato disponibilizados dos dados, sendo o formato CSV, XML e EXCEL.
 
-*_____________________________________________________________________________________________________________________________*
+*_______________________________________________________________________________________________*
 ###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
 
 
@@ -54,4 +54,4 @@ Temos três opções de formato disponibilizados dos dados, sendo o formato CSV,
 
 
 **Usuário consulta os dados filtrando por país e intervalo de tempo
-______________________________________________________________________________________________________________________________*
+*_______________________________________________________________________________________________*
