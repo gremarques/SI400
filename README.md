@@ -39,7 +39,7 @@ IncomeGroup - Grupo de renda do país
 *_______________________________________________________________________________________________*
 ###- Volume de dados (quantos valores existem ou dimensão do conjunto de dados em bytes):
 
-Há uma variação entre 35 KB e 135 KB dependendo do formato escolhido.
+Dependendo do formato escolhido, CSV, XML OU EXCEL, o volume de dados varia entre 35 KB, 90 KB e 135 KB, respectivamente.
 
 *_______________________________________________________________________________________________*
 ###- Formato de disponibilização dos dados (CSV, JSON, XML...):
