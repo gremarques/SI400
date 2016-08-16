@@ -50,7 +50,7 @@ Temos três opções de formato disponibilizados dos dados, sendo o formato CSV,
 ###- Pelo menos um exemplo de consulta que pode ser realizada e como seria a apresentação gráfica do resultado
 
 
-![Usuário consulta os dados filtrando por país e intervalo de tempo](https://github.com/leomunniz/leomunniz.github.io/blob/master/images/graph%20(2).jpg)
+![Usuário consulta os dados filtrando por país e intervalo de tempo](https://github.com/leomunniz/leomunniz.github.io/blob/master/images/graph.jpg)
 
 
 **Usuário consulta os dados filtrando por país e intervalo de tempo
