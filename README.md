@@ -54,4 +54,4 @@ Temos três opções de formato disponibilizados dos dados, sendo o formato CSV,
 
 
 **Usuário consulta os dados filtrando por país e intervalo de tempo
-*_______________________________________________________________________________________________*
+_______________________________________________________________________________________________*
