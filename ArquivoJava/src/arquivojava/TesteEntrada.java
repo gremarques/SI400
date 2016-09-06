@@ -16,6 +16,7 @@ import java.util.logging.Logger;
         
     public static void main (String[] args) {
        String s;
+       
        //Criando uma pasta 
        File file = new File("/Users/leo/Desktop/Java/Novo Diretorio");
        file.mkdir();
@@ -26,6 +27,7 @@ import java.util.logging.Logger;
         try {
             arquivo.createNewFile();      
             //Escrever algo no arquivo
+            System.out.println("Digite algo no arquivo...");
             Scanner scan = new Scanner(System.in);
             s = scan.nextLine();
             
@@ -45,6 +47,7 @@ import java.util.logging.Logger;
             while(linha != null){
                 System.out.println(linha);
                 linha = lerb.readLine();
+               
                 
             }
             
