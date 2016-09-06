@@ -1,14 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projeto.fertilizante;
 
-/**
- *
- * @author Bruno
- */
-public class Grafico {
-    int id_grafico;
+public class Grafico 
+{
+    int id_Grafico;
+    
+    //Metodos
+    public int getId_grafico() 
+    {
+        return id_Grafico;
+    }
+
+    public boolean setId_grafico(int id_Grafico) 
+    {
+        if (id_Grafico > 0)
+        {
+            this.id_Grafico = id_Grafico;
+            return true;
+        }
+        else
+            return false;
+    }
+    //Construtor
+
+    public Grafico() {
+        this.id_Grafico = 0;
+    }
+    
+    
 }
