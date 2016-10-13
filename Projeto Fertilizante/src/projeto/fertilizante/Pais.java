@@ -5,13 +5,15 @@
  */
 package projeto.fertilizante;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Bruno
  */
-public class Pais {
+public class Pais implements Serializable{
     String nome;
-    int codigo;
+    String codigo;
     int valor_Consumo;
     String regiao;
     String grupo_renda;
@@ -19,7 +21,7 @@ public class Pais {
     //Contrutor
     public Pais() {
         this.nome = null;
-        this.codigo = 0;
+        this.codigo = null;
         this.valor_Consumo = 0;
         this.regiao = null;
         this.grupo_renda = null;
@@ -38,20 +40,16 @@ public class Pais {
         return true;
     }
 
-    public int getCodigo() 
+    public String getCodigo() 
     {
         return codigo;
     }
 
-    public boolean setCodigo(int codigo) 
+    public boolean setCodigo(String codigo) 
     {
-        if (codigo > 0)
-        {
+        
             this.codigo = codigo;
             return true;
-        }
-        else
-            return false;
     }
 
     public int getValor_consumo() 
