@@ -12,17 +12,6 @@ import java.util.logging.Logger;
 public class ProjetoFertilizante {
     public static void main(String[] args) throws FileNotFoundException, IOException 
     {
-        
-        //codigo da maneira feito pelo professor. nao deu certo...
-        //erro na funcao toString na classe WorldBank (acho)
-        /*try{
-        WorldBank wb = new WorldBank();
-        File arq = new File("/Users/leo/Downloads/arquivo csv/Metadata_Country_API_AG.CON.FERT.ZS_DS2_en_csv_v2");            
-        wb.save(arq);
-        WorldBank refund = new WorldBank();
-        refund.load(arq);
-        System.out.println("Obtido localmente" + " "+refund.toString());*/
-        
         //Quando forem executar mudar o endereço do arquivo abaixo(/Users/leo ...) para o endereco baixado no seu computador
         CSVReader reader = new CSVReader(new FileReader("/Users/Gregory/Desktop/FT - UNICAMP/4° semestre/POO II/API_AG.CON.FERT.ZS_DS2_en_csv_v2.csv"));
         String [] nextLine;
@@ -30,7 +19,6 @@ public class ProjetoFertilizante {
         Pais[] paises;
         paises = new Pais[300];
         int contador = 0;
-       
         
         while ((nextLine = reader.readNext()) != null) 
         {
@@ -50,9 +38,4 @@ public class ProjetoFertilizante {
         //}
         
     }
- 
-       /* catch(Exception x) {
-            Logger.getLogger(ProjetoFertilizante.class.getName()).log(Level.SEVERE, null, x);
-        }
-    }*/
 }
