@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Pais implements Serializable{
     String nome;
     String codigo;
-    int valor_Consumo;
+    float valor_Consumo;
     String regiao;
     String grupo_renda;
     
@@ -26,8 +26,7 @@ public class Pais implements Serializable{
         this.regiao = null;
         this.grupo_renda = null;
     }
-    
-    
+  
     //Metodos
     public String getNome() 
     {
@@ -52,22 +51,6 @@ public class Pais implements Serializable{
             return true;
     }
 
-    public int getValor_consumo() 
-    {
-        return valor_Consumo;
-    }
-
-    public boolean setValor_consumo(int valor_Consumo) 
-    {
-           if (valor_Consumo > 0)
-        {
-            this.valor_Consumo = valor_Consumo;
-            return true;
-        }
-        else
-            return false;
-    }
-
     public String getRegiao() {
         return regiao;
     }
@@ -87,7 +70,14 @@ public class Pais implements Serializable{
         this.grupo_renda = grupo_renda;
         return true;
     }
-    
-    
+
+    public float getValor_Consumo() {
+        return valor_Consumo;
+    }
+
+    public void setValor_Consumo(float valor_Consumo) {
+        this.valor_Consumo = valor_Consumo;
+    }
+ 
     
 }

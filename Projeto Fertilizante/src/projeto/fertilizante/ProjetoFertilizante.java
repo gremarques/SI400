@@ -13,7 +13,7 @@ public class ProjetoFertilizante {
     public static void main(String[] args) throws FileNotFoundException, IOException 
     {
         //Quando forem executar mudar o endereço do arquivo abaixo(/Users/leo ...) para o endereco baixado no seu computador
-        CSVReader reader = new CSVReader(new FileReader("\\Users\\leo\\Downloads\\API_AG.CON.FERT.ZS_DS2_en_csv_v2.csv"));
+        CSVReader reader = new CSVReader(new FileReader("API_AG.CON.FERT.ZS_DS2_en_csv_v2.csv"));
         String [] nextLine;
         
         Pais[] paises;
@@ -37,5 +37,9 @@ public class ProjetoFertilizante {
         //    System.out.println(" -- " + nextLine[0] + " ** ");
         //}
         
+    }
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

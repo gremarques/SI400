@@ -11,8 +11,9 @@ public class Tela_Principal extends javax.swing.JFrame {
 
     public Tela_Principal() throws IOException {
         initComponents();
-        PrencherPaises();
-        
+        PrencherPaises();      
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -137,6 +138,11 @@ public class Tela_Principal extends javax.swing.JFrame {
     private void btnAnaliseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnaliseActionPerformed
         String anoInicial = (String) boxAnoInicial.getSelectedItem(); // Recebendo conteudo do 1 ano selecionado
         String anoFinal = (String) boxAnoFinal.getSelectedItem(); // Recebendo conteudo do 2 ano selecionado
+        
+        Tabela tela = null;
+        tela = new Tabela();
+        tela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAnaliseActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
@@ -145,7 +151,7 @@ public class Tela_Principal extends javax.swing.JFrame {
 
     //Receber os paises do csv
     public void PrencherPaises() throws FileNotFoundException, IOException{
-        CSVReader reader = new CSVReader(new FileReader("\\Users\\leo\\Downloads\\API_AG.CON.FERT.ZS_DS2_en_csv_v2.csv"));
+        CSVReader reader = new CSVReader(new FileReader("API_AG.CON.FERT.ZS_DS2_en_csv_v2.csv"));
         String [] nextLine;
         
         Pais[] paises;
@@ -156,14 +162,16 @@ public class Tela_Principal extends javax.swing.JFrame {
         {
             paises[contador] = new Pais(); // referenciando o array para Pais
             paises[contador].setNome(nextLine[0]); // set nome de acordo com a linha em questão
-            //System.out.println(nextLine[0]);               
-            boxPaises.addItem(paises[contador].getNome());
+            //System.out.println(nextLine[0]);
+            paises[contador].setCodigo(nextLine[1]);
+            //System.out.println(paises[contador].getCodigo());
+           //paises[contador].setValor_Consumo(nexLine[10]); (erro) 
+           boxPaises.addItem(paises[contador].getNome());
             contador++;
         }
-        
     }
     
-    public static void main(String args[]) {
+public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -177,13 +185,13 @@ public class Tela_Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Tela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Tela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Tela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Tela_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -195,7 +203,6 @@ public class Tela_Principal extends javax.swing.JFrame {
                 } catch (IOException ex) {
                     Logger.getLogger(Tela_Principal.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                
             }
         });
     }
