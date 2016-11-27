@@ -1,7 +1,11 @@
+package projeto.fertilizante;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 import projeto.fertilizante.Tela_Principal;
 
 /*
@@ -23,8 +27,9 @@ public class Tabela extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -108,7 +113,8 @@ public class Tabela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    Tela_Principal tela = null;
+    // Botao Voltar [para Tela_Principal]
+        Tela_Principal tela = null;
         try {
             tela = new Tela_Principal();
         } catch (IOException ex) {
@@ -152,6 +158,8 @@ public class Tabela extends javax.swing.JFrame {
             }
         });
     }
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

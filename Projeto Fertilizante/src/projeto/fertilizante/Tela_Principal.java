@@ -36,6 +36,11 @@ public class Tela_Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         boxPaises.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        boxPaises.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxPaisesActionPerformed(evt);
+            }
+        });
 
         btnAnalise.setText("Analisar");
         btnAnalise.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +101,7 @@ public class Tela_Principal extends javax.swing.JFrame {
                     .addComponent(boxAnoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAnalise)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Opções");
@@ -148,6 +153,10 @@ public class Tela_Principal extends javax.swing.JFrame {
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_menuSairActionPerformed
+
+    private void boxPaisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxPaisesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxPaisesActionPerformed
 
     //Receber os paises do csv
     public void PrencherPaises() throws FileNotFoundException, IOException{
