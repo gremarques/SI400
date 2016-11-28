@@ -93,11 +93,10 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jBtnGrafico" min="-2" max="-2" attributes="0"/>
                               <Component id="boxAnoFinal" min="-2" max="-2" attributes="0"/>
-                              <Component id="jteste" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="179" max="32767" attributes="0"/>
+                  <EmptySpace pref="185" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -106,9 +105,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jteste" min="-2" pref="43" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                   <Component id="boxPaises" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -187,11 +184,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnGraficoActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jteste">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="teste"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

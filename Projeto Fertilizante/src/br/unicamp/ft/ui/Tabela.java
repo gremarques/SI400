@@ -1,5 +1,6 @@
 package br.unicamp.ft.ui;
 
+import br.unicamp.ft.entities.ValoresFertilizante;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ import br.unicamp.ft.ui.Tela_Principal;
  */
 public class Tabela extends javax.swing.JFrame {
 
+    private ValoresFertilizante anosPaises;
     /**
      * Creates new form Tabela
      */
@@ -121,7 +123,7 @@ public class Tabela extends javax.swing.JFrame {
     // Botao Voltar [para Tela_Principal]
         Tela_Principal tela = null;
         try {
-            tela = new Tela_Principal();
+            tela = new Tela_Principal(anosPaises);
         } catch (IOException ex) {
             Logger.getLogger(Tabela.class.getName()).log(Level.SEVERE, null, ex);
         }
