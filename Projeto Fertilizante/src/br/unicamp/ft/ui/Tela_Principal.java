@@ -17,15 +17,15 @@ import javafx.scene.chart.XYChart;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JDialog;
 import br.unicamp.ft.entities.Pais;
-import br.unicamp.ft.entities.ValoresFertilizante;
+import br.unicamp.ft.entities.AnosPaises;
 
 public class Tela_Principal extends javax.swing.JFrame {
     
-    private ValoresFertilizante anosPaises;
+    private AnosPaises anosPaises;
     Pais paises;
     
 
-    public Tela_Principal(ValoresFertilizante anosPaises) throws IOException {
+    public Tela_Principal(AnosPaises anosPaises) throws IOException {
         initComponents();
         PrencherPaises();     
         this.anosPaises = anosPaises;
@@ -279,7 +279,7 @@ public static void main(String args[]) throws IOException {
         //</editor-fold>
 
         /* Create and display the form */
-         ValoresFertilizante anosPaises = new ValoresFertilizante();
+         AnosPaises anosPaises = new AnosPaises();
         System.out.println(anosPaises.nomesAnos);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

@@ -1,20 +1,21 @@
 package br.unicamp.ft.entities;
 
+import br.unicamp.ft.dados.PaisesDados;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class ValoresFertilizante {
+public class AnosPaises {
 
     private final Map<String,Pais> listaPaises;
-    private final ProjetoFertilizante paisDadosPersist;
+    private final PaisesDados paisDadosPersist;
     public final List<String> nomesAnos;
 
 
-    public ValoresFertilizante() {
-    paisDadosPersist = new ProjetoFertilizante();
+    public AnosPaises() {
+    paisDadosPersist = new PaisesDados();
     listaPaises = paisDadosPersist.lerListaPaisesCSV();
     nomesAnos = paisDadosPersist.obterHeader();
     }

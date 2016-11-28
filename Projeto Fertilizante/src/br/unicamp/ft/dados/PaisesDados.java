@@ -1,5 +1,6 @@
-package br.unicamp.ft.entities;
+package br.unicamp.ft.dados;
 
+import br.unicamp.ft.entities.Pais;
 import com.opencsv.CSVReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +15,7 @@ import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ProjetoFertilizante {
+public class PaisesDados {
     List<String> anoPaises = new ArrayList();
     
         
@@ -55,7 +56,7 @@ public class ProjetoFertilizante {
                 }
             }
             catch(IOException ex){
-                Logger.getLogger(ProjetoFertilizante.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(PaisesDados.class.getName()).log(Level.SEVERE, null, ex);
             }
             return listaPaises;
         }
@@ -76,7 +77,7 @@ public class ProjetoFertilizante {
    
     
     //-----------------------------------------------------------------------------------------------------------
-    
+     
    public static void main(String[] args) throws FileNotFoundException, IOException 
     {
         

@@ -1,6 +1,6 @@
 package br.unicamp.ft.ui;
 
-import br.unicamp.ft.entities.ValoresFertilizante;
+import br.unicamp.ft.entities.AnosPaises;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ import br.unicamp.ft.ui.Tela_Principal;
  */
 public class Tabela extends javax.swing.JFrame {
 
-    private ValoresFertilizante anosPaises;
+    private AnosPaises anosPaises;
     /**
      * Creates new form Tabela
      */

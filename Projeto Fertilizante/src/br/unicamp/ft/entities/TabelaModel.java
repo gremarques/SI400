@@ -4,15 +4,15 @@ import java.util.Map;
 import java.util.TreeMap;
 import javax.swing.table.AbstractTableModel;
 import br.unicamp.ft.entities.Pais;
-import br.unicamp.ft.entities.ValoresFertilizante;
+import br.unicamp.ft.entities.AnosPaises;
 
 public class TabelaModel extends AbstractTableModel{
     private final String[] colunas;
     private final String[] linhas;
     Map<String,Pais> listaPaises;
-    ValoresFertilizante tblValoresFertilizante;
+    AnosPaises tblValoresFertilizante;
     
-    public TabelaModel(ValoresFertilizante valoresPaises, Pais pais){
+    public TabelaModel(AnosPaises valoresPaises, Pais pais){
         this.tblValoresFertilizante = valoresPaises;
         
         int numeroColunas = tblValoresFertilizante.nomesAnos.size() + 2;
@@ -32,7 +32,7 @@ public class TabelaModel extends AbstractTableModel{
         linhas = listaPaises.keySet().toArray(new String[listaPaises.size()]);
     }
     
-    public TabelaModel(ValoresFertilizante valoresPaises,Map<String,Pais> listaPaises,String Anos){
+    public TabelaModel(AnosPaises valoresPaises,Map<String,Pais> listaPaises,String Anos){
         this.tblValoresFertilizante = valoresPaises;
         int numeroColunas;
         

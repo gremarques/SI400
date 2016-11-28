@@ -7,8 +7,8 @@ package br.unicamp.ft.ui;
 
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import br.unicamp.ft.entities.ProjetoFertilizante;
-import br.unicamp.ft.entities.ValoresFertilizante;
+import br.unicamp.ft.dados.PaisesDados;
+import br.unicamp.ft.entities.AnosPaises;
 
 /**
  *
@@ -19,7 +19,7 @@ public class Tabela2 extends javax.swing.JFrame {
     /**
      * Creates new form Tabela2
      */
-    public Tabela2(ProjetoFertilizante fert, int anoInicial,int anoFinal) {
+    public Tabela2(PaisesDados fert, int anoInicial,int anoFinal) {
         initComponents();
         jTable1.setModel(new ConsumoFertilizante(fert,anoInicial,anoFinal));
     }
@@ -76,9 +76,9 @@ public class Tabela2 extends javax.swing.JFrame {
 
 class ConsumoFertilizante extends AbstractTableModel{
     List anos;
-    ProjetoFertilizante fert;
+    PaisesDados fert;
     
-    public ConsumoFertilizante(ProjetoFertilizante fert,int from,int to){
+    public ConsumoFertilizante(PaisesDados fert,int from,int to){
         this.fert = fert;
         anos = fert.anos(from, to);
     }
