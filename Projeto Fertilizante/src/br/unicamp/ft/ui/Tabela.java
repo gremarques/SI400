@@ -1,4 +1,4 @@
-package projeto.fertilizante;
+package br.unicamp.ft.ui;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import projeto.fertilizante.Tela_Principal;
+import br.unicamp.ft.ui.Tela_Principal;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -66,6 +66,11 @@ public class Tabela extends javax.swing.JFrame {
         jLabel1.setText("Consumo de fertilizante");
 
         jButton1.setText("Verificar gráfico");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Voltar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +128,10 @@ public class Tabela extends javax.swing.JFrame {
     tela.setVisible(true);
     dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

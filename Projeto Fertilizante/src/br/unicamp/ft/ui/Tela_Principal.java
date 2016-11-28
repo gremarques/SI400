@@ -1,17 +1,35 @@
-package projeto.fertilizante;
+package br.unicamp.ft.ui;
 
 import com.opencsv.CSVReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JDialog;
+import br.unicamp.ft.entities.Pais;
+import br.unicamp.ft.entities.ValoresFertilizante;
 
 public class Tela_Principal extends javax.swing.JFrame {
+    
+    private ValoresFertilizante anosPaises;
+    Pais paises;
+    
 
-    public Tela_Principal() throws IOException {
+    public Tela_Principal(ValoresFertilizante anosPaises) throws IOException {
         initComponents();
-        PrencherPaises();      
+        PrencherPaises();     
+        this.anosPaises = anosPaises;
+        InicializarComboBox();
         setLocationRelativeTo(null);
         setResizable(false);
     }
@@ -27,6 +45,8 @@ public class Tela_Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jBtnGrafico = new javax.swing.JButton();
+        jteste = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -49,9 +69,7 @@ public class Tela_Principal extends javax.swing.JFrame {
             }
         });
 
-        boxAnoInicial.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "- - -", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013" }));
-
-        boxAnoFinal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "- - -", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013" }));
+        boxAnoFinal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " " }));
 
         jLabel1.setText("De");
 
@@ -60,38 +78,48 @@ public class Tela_Principal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setText("Consulta");
 
+        jBtnGrafico.setText("Gerar gráfico");
+        jBtnGrafico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnGraficoActionPerformed(evt);
+            }
+        });
+
+        jteste.setText("teste");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(boxPaises, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(boxPaises, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(boxAnoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel2))
+                            .addComponent(btnAnalise))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(boxAnoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(boxAnoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(btnAnalise)))
-                .addContainerGap(163, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jBtnGrafico)
+                            .addComponent(boxAnoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jteste, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addGap(67, 67, 67)
+                .addGap(18, 18, 18)
+                .addComponent(jteste, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(boxPaises, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -100,7 +128,9 @@ public class Tela_Principal extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(boxAnoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnAnalise)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAnalise)
+                    .addComponent(jBtnGrafico))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -128,7 +158,7 @@ public class Tela_Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,13 +171,6 @@ public class Tela_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAnaliseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnaliseActionPerformed
-        String anoInicial = (String) boxAnoInicial.getSelectedItem(); // Recebendo conteudo do 1 ano selecionado
-        String anoFinal = (String) boxAnoFinal.getSelectedItem(); // Recebendo conteudo do 2 ano selecionado
-        
-        Tabela tela = null;
-        tela = new Tabela();
-        tela.setVisible(true);
-        dispose();
     }//GEN-LAST:event_btnAnaliseActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
@@ -158,29 +181,86 @@ public class Tela_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_boxPaisesActionPerformed
 
-    //Receber os paises do csv
+    //Gerando o grafico
+    private void jBtnGraficoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGraficoActionPerformed
+        int inicio = (int) boxAnoInicial.getSelectedItem();
+        int fim =(int) boxAnoFinal.getSelectedItem();
+        Pais pais = this.anosPaises.buscarUmPais(this.boxPaises.getSelectedItem().toString());
+        JDialog janP1 = new JDialog();
+        JFXPanel fxPanel = new JFXPanel();
+        janP1.add(fxPanel);
+        janP1.setSize(800,600);
+        janP1.setVisible(true);
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run(){
+                initFX(fxPanel,pais,fim,inicio);
+            }
+        });
+    }//GEN-LAST:event_jBtnGraficoActionPerformed
+private void initFX(JFXPanel panel,Pais pais,int fim,int inicio){
+        final CategoryAxis xAxis = new CategoryAxis();
+        final NumberAxis yAxis = new NumberAxis();
+        xAxis.setLabel("Anos");
+        yAxis.setLabel("Valores");
+        
+        final BarChart<String,Number> bc = new BarChart<>(xAxis,yAxis);
+        
+        bc.setTitle("Consumo de fertilizante do Pais : " + pais.getPais());
+        
+        XYChart.Series series1 = new XYChart.Series();
+        series1.setName("Consumo em quilograma por hectare");
+        
+        
+        /*for(String nomePaises: this.anosPaises.nomesAnos){ //Erro! fazendo o grafico de todos os anos
+            series1.getData().add(new XYChart.Data(nomePaises, pais.retornarValor(nomePaises))); 
+       }*/
+        
+        for (int ano =inicio;ano < fim;ano++ ){
+            String nomePaises = null;
+            series1.getData().add(new XYChart.Data(ano,pais.retornarValor(nomePaises)));
+        }
+       
+        bc.getData().addAll(series1);
+        Scene scene = new Scene(bc,800,600);
+        panel.setScene(scene);
+    }
+
+    //Receber os paises do CSV
     public void PrencherPaises() throws FileNotFoundException, IOException{
         CSVReader reader = new CSVReader(new FileReader("API_AG.CON.FERT.ZS_DS2_en_csv_v2.csv"));
         String [] nextLine;
-        
-        Pais[] paises;
-        paises = new Pais[300];
-        int contador = 0;
-        
+        Pais paises = new Pais();
+       
         while ((nextLine = reader.readNext()) != null) 
         {
-            paises[contador] = new Pais(); // referenciando o array para Pais
-            paises[contador].setNome(nextLine[0]); // set nome de acordo com a linha em questão
-            //System.out.println(nextLine[0]);
-            paises[contador].setCodigo(nextLine[1]);
-            //System.out.println(paises[contador].getCodigo());
-           //paises[contador].setValor_Consumo(nexLine[10]); (erro) 
-           boxPaises.addItem(paises[contador].getNome());
-            contador++;
+            paises = new Pais(); // referenciando o array para Pais
+            paises.setPais(nextLine[0]); // set nome de acordo com a linha em questão
+            boxPaises.addItem(paises.getPais());//Adiciona os paises no combo-box,para o usuario escolher
+            
         }
     }
+    //Inserir os anos do CSV
+    private void InicializarComboBoxAno(){
+        List<String> anos = anosPaises.nomesAnos;
+        DefaultComboBoxModel model = new DefaultComboBoxModel(anos.toArray(new String[anos.size()])); 
+        this.boxAnoInicial.setModel(model);
+        this.boxAnoFinal.setModel(model);
+    }
+    //Insere os caracteres "- - - -" junto com os anos
+    private void InicializarComboBox(){
+        List<String> nomeAnos = anosPaises.nomesAnos;
+        
+        this.boxAnoInicial.addItem("- - - -");
+        this.boxAnoFinal.addItem("- - - -");
+        for(String pais: nomeAnos){
+                this.boxAnoInicial.addItem(pais);
+                this.boxAnoFinal.addItem(pais);
+        }
+        
+    }
     
-public static void main(String args[]) {
+public static void main(String args[]) throws IOException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -205,10 +285,12 @@ public static void main(String args[]) {
         //</editor-fold>
 
         /* Create and display the form */
+         ValoresFertilizante anosPaises = new ValoresFertilizante();
+        System.out.println(anosPaises.nomesAnos);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new Tela_Principal().setVisible(true);
+                    new Tela_Principal(anosPaises).setVisible(true);
                 } catch (IOException ex) {
                     Logger.getLogger(Tela_Principal.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -221,6 +303,7 @@ public static void main(String args[]) {
     private javax.swing.JComboBox boxAnoInicial;
     private javax.swing.JComboBox boxPaises;
     private javax.swing.JButton btnAnalise;
+    private javax.swing.JButton jBtnGrafico;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -229,6 +312,7 @@ public static void main(String args[]) {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jteste;
     private javax.swing.JMenuItem menuSair;
     // End of variables declaration//GEN-END:variables
 }
