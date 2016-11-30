@@ -12,7 +12,7 @@ public class TabelaModel extends AbstractTableModel{
     Map<String,Pais> listaPaises;
     AnosPaises tblValoresFertilizante;
     
-    public TabelaModel(AnosPaises valoresPaises, Pais pais){
+    /*public TabelaModel(AnosPaises valoresPaises, Pais pais){
         this.tblValoresFertilizante = valoresPaises;
         
         int numeroColunas = tblValoresFertilizante.nomesAnos.size() + 2;
@@ -61,6 +61,14 @@ public class TabelaModel extends AbstractTableModel{
         this.listaPaises = listaPaises;
         linhas = listaPaises.keySet().toArray(new String[listaPaises.size()]);
         
+    }*/
+    
+    public TabelaModel( Map<String, Pais> listaPaises){
+        colunas = new String[2];
+        colunas[0] = "Pais";
+        colunas[1] = "Anos";
+        linhas = listaPaises.keySet().toArray(new String[listaPaises.size()]);
+        this.listaPaises = listaPaises;
     }
 
     @Override
@@ -80,8 +88,13 @@ public class TabelaModel extends AbstractTableModel{
     }
 
     @Override
-    public Object getValueAt(int i, int i1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Object getValueAt( int rowIndex, int columnIndex) {
+        String codigo = this.linhas[rowIndex];
+        switch(columnIndex){
+            case 0: return this.listaPaises.get(codigo).getPais();
+            case 1: return this.listaPaises.get(codigo).getValores();
+        }
+       return null;
     }
 
    
