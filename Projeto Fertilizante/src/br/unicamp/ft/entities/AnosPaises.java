@@ -13,7 +13,7 @@ public class AnosPaises {
     private final PaisesDados paisDadosPersist;
     public final List<String> nomesAnos;
 
-
+    //Obter os anos dos paises
     public AnosPaises() {
     paisDadosPersist = new PaisesDados();
     listaPaises = paisDadosPersist.lerListaPaisesCSV();
@@ -23,19 +23,24 @@ public class AnosPaises {
     public int obterNumeroPaises(){
         return this.listaPaises.size();
     }
+    //Buscar o pais no CSV
     public Map<String,Pais> buscarPaises(String paisBuscado){
         Map<String,Pais> paisesBuscado = new TreeMap();
         for(Map.Entry<String,Pais> entry : this.listaPaises.entrySet()){
             String nomePais = entry.getValue().getPais().toLowerCase();
-            if(nomePais.contains(nomePais)){
+            if(nomePais.contains(paisBuscado)){
                 paisesBuscado.put(entry.getKey(),entry.getValue());
             }
         }
-        
         return paisesBuscado;
     }
     
     public Pais buscarUmPais(String pais){
         return listaPaises.get(pais);
     }    
+    
+    public static void main(String[] args){
+        AnosPaises p = new AnosPaises();
+        System.out.println(p.buscarPaises("Angola"));
+    }
 }

@@ -44,9 +44,6 @@ public class Pais implements Serializable{
         return valores;
     }
 
-    public void setValores(Map<String, Double> valores) {
-        this.valores = valores;
-    }
     public void adcionarValor(String pais, Double valores){
         this.valores.put(pais, valores);
     }
@@ -55,5 +52,19 @@ public class Pais implements Serializable{
         return this.valores.get(pais);
     }
     
-   
+   @Override
+    public String toString(){        
+        StringBuilder sb = new StringBuilder();
+        sb.append("Pais:" );
+        sb.append(this.pais);
+        sb.append(";");
+              
+	for (Map.Entry<String, Double> entry : this.valores.entrySet()) {
+            sb.append(entry.getKey());
+            sb.append(":");
+            sb.append(entry.getValue());
+            sb.append(";");
+	}
+        return sb.toString();
+    }
 }
