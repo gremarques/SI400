@@ -1,10 +1,12 @@
-package br.unicamp.ft.entities;
+package br.unicamp.ft.ui;
 
 import java.util.Map;
 import java.util.TreeMap;
 import javax.swing.table.AbstractTableModel;
 import br.unicamp.ft.entities.Pais;
 import br.unicamp.ft.entities.AnosPaises;
+import br.unicamp.ft.entities.AnosPaises;
+import br.unicamp.ft.entities.Pais;
 
 public class TabelaModel extends AbstractTableModel{
     private final String[] colunas;

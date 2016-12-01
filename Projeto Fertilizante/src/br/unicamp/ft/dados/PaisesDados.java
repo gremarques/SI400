@@ -68,14 +68,5 @@ public class PaisesDados {
                 }
             }
     }
-    
-   
-    
-    //-----------------------------------------------------------------------------------------------------------
-     public static void main (String[] args)throws FileNotFoundException,IOException{
-         PaisesDados p = new PaisesDados();
-         System.out.println(p.lerListaPaisesCSV());
-         
-     }
-  
-  }    
+
+}    
